@@ -1,0 +1,106 @@
+.statistic {
+  padding: 30px 0 0 0 ;
+  margin: 0;
+  margin-bottom: -40px;
+  background: #e3f2fd;
+}
+
+.statistic .container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section-title {
+  text-align: center;
+  margin: 20px auto; /* Center the title and add spacing */
+}
+
+.section-title h2 {
+  font-size: 36px;
+  color: #1e88e5;
+  margin-bottom: 20px;
+  font-weight: bold; /* Make the heading bold */
+}
+
+.bg-06 {
+  background: #e3f2fd;
+  overflow: hidden;
+}
+
+.bg-06 .blog-sub {
+  margin: 20px 0;
+  /* padding: 20px 0; */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bg-06 .blog-sub:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.blog-content {
+  border-top-right-radius: 6px;
+  border-top-left-radius: 6px;
+  overflow: hidden;
+}
+
+.blog-content-section {
+  padding: 20px 25px;
+  background: #fff;
+  border: solid 1px #eee8e8;
+}
+
+.blog-content-title h4 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blog-content-title p {
+  font-size: 16px;
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+.blog-content-title h5 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #1e88e5;
+}
+
+.blog-admin ol {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #777;
+}
+
+.blog-admin ol li {
+  display: flex;
+  align-items: center;
+}
+
+.blog-admin ol li i {
+  margin-right: 5px;
+}
+
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+.blog-content img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures images cover the space without distortion */
+  aspect-ratio: 16/9; /* Maintain a consistent aspect ratio */
+  border-radius: 6px; /* Optional: matches the border-radius of the container */
+}

@@ -1,0 +1,89 @@
+
+.nav-pills li a:hover{
+    background-color: blue;
+}
+
+.right-div-property{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.head{
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    background: url('../../assets/contactUs.jpg');
+    background-size: cover;
+}
+
+.head h1{
+    font-weight: 500;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.head button{
+    background: #e94d4e;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 12px 32px;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.Available {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.Available h1{
+    font-weight: 500;
+  color: #233152;
+  font-size: 50px;
+}
+
+.map{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+
+.card{
+    --bs-card-border-color: black;
+    --bs-card-border-radius: 5px;
+}
+
+.book {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.book button{
+    margin-top: 20px;
+}
+
+.textarea-style{
+    margin-top: 10px;
+}
+  

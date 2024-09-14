@@ -1,0 +1,52 @@
+/* Navbar.css */
+
+.custom-navbar {
+  background-color: rgb(25, 118, 210); /* Vibrant orange background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 10px 20px;
+}
+
+.custom-brand {
+  font-size: 30px;
+  color: #ffffff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.custom-toggler {
+  border-color: #ffffff;
+}
+
+.custom-toggler .navbar-toggler-icon {
+  color: #ffffff;
+}
+
+.custom-nav .custom-link {
+  font-size: 18px;
+  color: #ffffff;
+  margin-right: 15px;
+  transition: color 0.3s ease-in-out;
+}
+
+.custom-nav .custom-link:hover {
+  color: #ffd700; /* Gold color on hover */
+}
+
+.custom-user-button {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: none;
+}
+
+.custom-menu .MuiPaper-root {
+  background-color: #ff5733;
+  color: #ffffff;
+}
+
+.custom-menu .MuiMenuItem-root:hover {
+  background-color: #ff7043; /* Slightly lighter orange on hover */
+}
+
+.custom-menu .MuiMenuItem-root {
+  font-size: 16px;
+}

@@ -1,0 +1,60 @@
+.about-container {
+  padding: 30px; /* Increased padding for better spacing */
+  margin-top: 0;
+  background-color: #e3f2fd; /* Light blue background */
+}
+
+.about-container img {
+  max-width: 100%;
+  border-radius: 8px; /* Added slight rounding for aesthetics */
+}
+
+.about-container ul {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none; /* Removed default list style */
+}
+
+.about-container p {
+  margin-bottom: 0;
+  width: 100%;
+  color: #333; /* Darker text color for readability */
+}
+
+.about-container h1, h2, h3, h4, h5, h6 {
+  color: #1e88e5; /* Blue theme color */
+}
+
+@media screen and (max-width: 940px) {
+  .about-container {
+    padding: 20px 10px; /* Adjusted padding for responsiveness */
+  }
+}
+
+.about-container .aboutlefft {
+  padding: 30px;
+  margin-top: 20px; /* Reduced margin for better alignment */
+}
+
+.about-container .aboutlefft h2 {
+  font-size: 2.5rem; /* Adjusted font size */
+  font-weight: 700;
+  margin-bottom: 15px; /* Reduced margin */
+}
+
+.about-container .aboutlefft p {
+  margin-bottom: 15px; /* Reduced margin */
+  color: #555; /* Darker text color */
+}
+
+.about-container .aboutlefft ul li {
+  padding: 8px;
+  font-size: 1.2rem;
+  color: #333; /* Darker text color */
+}
+
+.about-container .aboutlefft ul li i {
+  font-size: 1rem;
+  margin-right: 8px;
+  color: #1e88e5; /* Blue theme color for icons */
+}
