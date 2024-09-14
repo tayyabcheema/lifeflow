@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const login = createAsyncThunk('auth/login', async ({ email, password }) => {
-  const response = await axios.post('https://lifeflow-backend.vercel.app/api/auth/admin/login', { email, password });
+  const response = await axios.post('http://localhost:8000/api/auth/admin/login', { email, password });
   localStorage.setItem('accessToken', response.data.data.accessToken);
   localStorage.setItem('refreshToken', response.data.data.refreshToken);
   return response.data.data;
