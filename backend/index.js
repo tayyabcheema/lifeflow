@@ -19,7 +19,7 @@ app.use(cookieParser());
 app.use(express.json());
 
 const corsOptions = {
-  origin: ["http://localhost:5173", "http://localhost:5174"], // Your frontend origin
+  origin: ["https://lifeflow-frontend-client.vercel.app", "https://lifeflow-admin.vercel.app"], // Your frontend origin
   credentials: true, // This is important to allow cookies to be sent from the frontend
 };
 
