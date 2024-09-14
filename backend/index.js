@@ -25,6 +25,10 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+app.get("/", (req,res)=>{
+  res.send("Hello Nodejs")
+})
+
 // Route middlewares
 app.use("/api/auth", authRoutes);
 app.use("/api/donors", donorRoutes);
