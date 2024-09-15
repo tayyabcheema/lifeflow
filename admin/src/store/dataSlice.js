@@ -10,7 +10,7 @@ const initialState = {
 };
 
 const fetchData = async (endpoint) => {
-  const response = await axios.get(`http://localhost:8000/api/${endpoint}`);
+  const response = await axios.get(`https://lifeflow-server.up.railway.app/api/${endpoint}`);
   return response.data.data;
 };
 

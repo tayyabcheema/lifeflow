@@ -10,7 +10,7 @@ const initialState = {
 };
 
 export const login = createAsyncThunk('auth/login', async ({ email, password }) => {
-  const response = await axios.post('http://localhost:8000/api/auth/admin/login', { email, password });
+  const response = await axios.post('https://lifeflow-server.up.railway.app/api/auth/admin/login', { email, password });
   localStorage.setItem('accessToken', response.data.data.accessToken);
   localStorage.setItem('refreshToken', response.data.data.refreshToken);
   return response.data.data;
@@ -18,7 +18,7 @@ export const login = createAsyncThunk('auth/login', async ({ email, password }) 
 
 export const refreshAccessToken = createAsyncThunk('auth/refreshAccessToken', async (_, { getState }) => {
   const { auth: { refreshToken } } = getState();
-  const response = await axios.post('http://localhost:8000/api/auth/admin/refresh', {}, {
+  const response = await axios.post('https://lifeflow-server.up.railway.app/api/auth/admin/refresh', {}, {
     withCredentials: true,
   });
   localStorage.setItem('accessToken', response.data.accessToken);
