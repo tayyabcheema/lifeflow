@@ -26,7 +26,7 @@ const EmailConfirmation = () => {
     const confirmEmail = async () => {
       const token = new URLSearchParams(location.search).get('token');
       try {
-        const response = await axios.get(`http://localhost:8000/api/auth/verify-email?token=${token}`);
+        const response = await axios.get(`https://lifeflow-server.up.railway.app/api/auth/verify-email?token=${token}`);
         setMessage(response.data.message);
         setLoading(false);
         setTimeout(() => {

@@ -72,7 +72,7 @@ const ResetPassword = () => {
     const token = new URLSearchParams(location.search).get("token");
 
     try {
-      const response = await axios.post(`http://localhost:8000/api/auth/reset-password?token=${token}`, {
+      const response = await axios.post(`https://lifeflow-server.up.railway.app/api/auth/reset-password?token=${token}`, {
         newPassword: formData.password,
       });
       setMessage(response.data.message);

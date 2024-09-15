@@ -59,7 +59,7 @@ const ForgetPassword = () => {
     if (!validate()) return;
 
     try {
-      const response = await axios.post("http://localhost:8000/api/auth/request-password-reset", { email });
+      const response = await axios.post("https://lifeflow-server.up.railway.app/api/auth/request-password-reset", { email });
       setMessage(response.data.message);
       setEmail("");
     } catch (error) {

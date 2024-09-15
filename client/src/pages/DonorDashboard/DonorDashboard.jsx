@@ -164,7 +164,7 @@ const DonorDashboard = () => {
 
   const fetchProfileData = async (donorId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/donors/${donorId}`);
+      const response = await axios.get(`https://lifeflow-server.up.railway.app/api/donors/${donorId}`);
       const { data } = response;
       setUser(data.data);
     } catch (error) {
@@ -174,7 +174,7 @@ const DonorDashboard = () => {
 
   const fetchAppointments = async (donorId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/appointments/not-completed`);
+      const response = await axios.get(`https://lifeflow-server.up.railway.app/api/appointments/not-completed`);
       const { data } = response;
       const userAppointments = data.filter((appointment) => appointment.donor && appointment.donor._id === donorId);
       setAppointments(userAppointments);
@@ -185,7 +185,7 @@ const DonorDashboard = () => {
 
   const fetchDonationHistory = async (donorId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/appointments/completed`);
+      const response = await axios.get(`https://lifeflow-server.up.railway.app/api/appointments/completed`);
       const { data } = response;
       const userCompletedAppointments = data.filter((appointment) => appointment.donor && appointment.donor._id === donorId);
       setDonationHistory(userCompletedAppointments);
@@ -196,7 +196,7 @@ const DonorDashboard = () => {
 
   const fetchHospitals = async () => {
     try {
-      const response = await axios.get("http://localhost:8000/api/hospitals");
+      const response = await axios.get("https://lifeflow-server.up.railway.app/api/hospitals");
       const { data } = response;
       setHospitals(data.data);
     } catch (error) {
@@ -222,7 +222,7 @@ const DonorDashboard = () => {
   const handleProfileUpdate = async () => {
     const storedUser = JSON.parse(localStorage.getItem("user"));
     try {
-      await axios.put(`http://localhost:8000/api/donors/${storedUser.donorId}`, {
+      await axios.put(`https://lifeflow-server.up.railway.app/api/donors/${storedUser.donorId}`, {
         address: user.address,
         city: user.city,
       });
@@ -250,7 +250,7 @@ const DonorDashboard = () => {
 
       const storedUser = JSON.parse(localStorage.getItem("user"));
       try {
-        const response = await axios.post("http://localhost:8000/api/appointments", {
+        const response = await axios.post("https://lifeflow-server.up.railway.app/api/appointments", {
           donorId: storedUser.donorId,
           hospitalId: newAppointment.center,
           date: newAppointment.date,

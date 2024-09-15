@@ -108,7 +108,7 @@ const DonorSignUp = () => {
     if (!validate()) return;
 
     try {
-      const response = await axios.post("http://localhost:8000/api/auth/donor/register", formData);
+      const response = await axios.post("https://lifeflow-server.up.railway.app/api/auth/donor/register", formData);
       if (response.status === 201) {
         setShowSuccessMessage(true);
         setTimeout(() => {

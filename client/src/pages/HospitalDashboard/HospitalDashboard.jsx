@@ -151,7 +151,7 @@ const HospitalDashboard = () => {
 
   const fetchProfileData = async (hospitalId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/hospitals/${hospitalId}`);
+      const response = await axios.get(`https://lifeflow-server.up.railway.app/api/hospitals/${hospitalId}`);
       const { data } = response;
       setProfileData(data.data);
     } catch (error) {
@@ -161,7 +161,7 @@ const HospitalDashboard = () => {
 
   const fetchAppointments = async (hospitalId) => {
     try {
-      const response = await axios.get("http://localhost:8000/api/appointments");
+      const response = await axios.get("https://lifeflow-server.up.railway.app/api/appointments");
       const { data } = response;
       const filteredAppointments = data.filter(appointment => appointment.center && appointment.center._id === hospitalId);
       setAppointments(filteredAppointments);
@@ -173,7 +173,7 @@ const HospitalDashboard = () => {
 
   const fetchBloodStock = async (hospitalId) => {
     try {
-      const response = await axios.get(`http://localhost:8000/api/blood-stock?hospitalId=${hospitalId}`);
+      const response = await axios.get(`https://lifeflow-server.up.railway.app/api/blood-stock?hospitalId=${hospitalId}`);
       const { data } = response;
       setBloodStock(Array.isArray(data.data) ? data.data : []);
     } catch (error) {
@@ -205,7 +205,7 @@ const HospitalDashboard = () => {
     event.preventDefault();
     const storedUser = JSON.parse(localStorage.getItem("user"));
     try {
-      await axios.put(`http://localhost:8000/api/hospitals/${storedUser.hospitalId}`, {
+      await axios.put(`https://lifeflow-server.up.railway.app/api/hospitals/${storedUser.hospitalId}`, {
         address: profileData.address,
         city: profileData.city,
       });
@@ -218,7 +218,7 @@ const HospitalDashboard = () => {
 
   const handleStatusChange = async (id, newStatus) => {
     try {
-      await axios.put(`http://localhost:8000/api/appointments/${id}/status`, { status: newStatus });
+      await axios.put(`https://lifeflow-server.up.railway.app/api/appointments/${id}/status`, { status: newStatus });
       setAppointments((prev) =>
         prev.map((appointment) => (appointment._id === id ? { ...appointment, status: newStatus } : appointment))
       );
@@ -231,7 +231,7 @@ const HospitalDashboard = () => {
 
   const handleConfirmComplete = async () => {
     try {
-      await axios.put(`http://localhost:8000/api/appointments/${appointmentToComplete}/status`, { status: "Completed" });
+      await axios.put(`https://lifeflow-server.up.railway.app/api/appointments/${appointmentToComplete}/status`, { status: "Completed" });
       setAppointments((prev) =>
         prev.map((appointment) => (appointment._id === appointmentToComplete ? { ...appointment, status: "Completed" } : appointment))
       );
@@ -246,7 +246,7 @@ const HospitalDashboard = () => {
 
   const handleDeleteAppointment = async (id) => {
     try {
-      await axios.delete(`http://localhost:8000/api/appointments/${id}`);
+      await axios.delete(`https://lifeflow-server.up.railway.app/api/appointments/${id}`);
       setAppointments((prev) => prev.filter((appointment) => appointment._id !== id));
       setSuccessMessage("Appointment deleted successfully!");
     } catch (error) {
@@ -257,7 +257,7 @@ const HospitalDashboard = () => {
 
   const handleQuantityChange = async (id, newQuantity) => {
     try {
-      await axios.put(`http://localhost:8000/api/blood-stock/${id}/quantity`, { quantity: newQuantity });
+      await axios.put(`https://lifeflow-server.up.railway.app/api/blood-stock/${id}/quantity`, { quantity: newQuantity });
       setBloodStock((prev) =>
         prev.map((stock) => (stock._id === id ? { ...stock, quantity: newQuantity } : stock))
       );
@@ -288,7 +288,7 @@ const HospitalDashboard = () => {
     event.preventDefault();
     const storedUser = JSON.parse(localStorage.getItem("user"));
     try {
-      const response = await axios.post(`http://localhost:8000/api/blood-stock`, {
+      const response = await axios.post(`https://lifeflow-server.up.railway.app/api/blood-stock`, {
         hospitalId: storedUser.hospitalId,
         bloodGroup: newBloodStock.bloodGroup,
         quantity: newBloodStock.quantity,
