@@ -62,7 +62,7 @@ const LoginForAll = () => {
     const loginUrl =
       selectedRole === "DonorDashboard"
         ? "https://lifeflow-server.up.railway.app/api/auth/donor/login"
-        : "https://lifeflow-server.up.railway.app/api/auth/hospitaxl/login";
+        : "https://lifeflow-server.up.railway.app/api/auth/hospital/login";
 
     try {
       const response = await axios.post(loginUrl, { email, password });
