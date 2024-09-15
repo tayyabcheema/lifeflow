@@ -88,7 +88,7 @@ const Donors = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8000/api/donors/${selectedDonor._id}`);
+      await axios.delete(`https://lifeflow-server.up.railway.app/api/donors/${selectedDonor._id}`);
       setDialogContent('Donor deleted successfully');
       setShowSuccess(true);
       dispatch(fetchDonors());
@@ -101,7 +101,7 @@ const Donors = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:8000/api/donors/${selectedDonor._id}`, formData);
+      await axios.put(`https://lifeflow-server.up.railway.app/api/donors/${selectedDonor._id}`, formData);
       setOpenUpdateDialog(false);
       dispatch(fetchDonors());
     } catch (error) {

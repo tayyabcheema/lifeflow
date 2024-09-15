@@ -80,7 +80,7 @@ const Hospitals = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:8000/api/hospitals/${selectedHospital._id}`);
+      await axios.delete(`https://lifeflow-server.up.railway.app/api/hospitals/${selectedHospital._id}`);
       setDialogContent('Hospital deleted successfully');
       setShowSuccess(true);
       dispatch(fetchHospitals());
@@ -93,7 +93,7 @@ const Hospitals = () => {
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:8000/api/hospitals/${selectedHospital._id}`, formData);
+      await axios.put(`https://lifeflow-server.up.railway.app/api/hospitals/${selectedHospital._id}`, formData);
       setOpenUpdateDialog(false);
       dispatch(fetchHospitals());
     } catch (error) {
